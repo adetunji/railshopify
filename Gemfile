@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -41,6 +38,20 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "sqlite3"
+	# Helpful gems
+	gem "better_errors" # improves error handling
+	gem "binding_of_caller" # used by better errors
+	# Testing frameworks
+	gem 'rspec-rails' # testing framework
+	gem "factory_girl_rails" # use factories, not fixtures
+	gem "capybara" # simulate browser activity
+	gem "fakeweb"
+	# Automated testing
+	gem 'guard' # automated execution of test suite upon change
+	gem "guard-rspec" # guard integration with rspec
+	# Only install the rb-fsevent gem if on Max OSX
+	gem 'rb-fsevent' # used for Growl notifications
 end
 
 group :development do
